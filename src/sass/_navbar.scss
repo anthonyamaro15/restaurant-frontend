@@ -1,0 +1,60 @@
+.navbar-wrapper {
+  width: 100%;
+  background: #f4f4f4;
+  z-index: 100;
+  //   border: 1px solid red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .Navbar {
+    //   border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+      max-width: 900px;
+    }
+    //  position: fixed;
+    //  top: 0;
+    //  left: 0;
+    //  right: 0;
+    //  z-index: 100;
+    //  background: #f4f4f4;
+
+    .logo-wrapper {
+      img {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    .links {
+      //  border: 1px solid red;
+      text-transform: capitalize;
+      a {
+        padding: 0.5rem 1rem;
+        // border: 1px solid blue;
+        margin-left: 0.5rem;
+        font-size: 1.2rem;
+        //   color: #435c35;
+        color: #333;
+
+        &:last-child {
+          //   color: blue;
+          padding-right: 0;
+        }
+      }
+
+      .active {
+        //   color: orange;
+        color: red;
+      }
+    }
+  }
+}
