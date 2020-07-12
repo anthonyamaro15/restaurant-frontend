@@ -10,14 +10,14 @@ const MobileNavbar = () => {
   return (
     <div>
       <div
-        className={isMoblie ? "burger-menu" : "burger-menu close"}
+        className={!isMoblie ? "burger-menu" : "burger-menu close"}
         onClick={toggleMenu}
       >
         <div className="lines"></div>
         <div className="lines"></div>
         <div className="lines"></div>
       </div>
-      <div className={!isMoblie ? "MobileNavbar show" : "MobileNavbar"}>
+      <div className={isMoblie ? "MobileNavbar show" : "MobileNavbar"}>
         <nav>
           <NavLink to="/" activeClassName="active">
             Home
