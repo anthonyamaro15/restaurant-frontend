@@ -1,6 +1,6 @@
 .navbar-wrapper {
   width: 100%;
-  background: #f4f4f4;
+  //   background: #f4f4f4;
   z-index: 100;
   //   border: 1px solid red;
   position: fixed;
@@ -12,10 +12,14 @@
     //   border: 1px solid red;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0.5rem 1rem;
     max-width: 1400px;
     margin: 0 auto;
-    align-items: center;
+
+    // without logo
+    //  align-items: center;
+    //  height: 7vh;
 
     @media (max-width: $tablet) {
       max-width: 900px;
@@ -28,9 +32,18 @@
     //  background: #f4f4f4;
 
     .logo-wrapper {
+      color: white;
       img {
         width: 90px;
         height: 90px;
+
+        @media (max-width: $sm-tablet) {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      @media (max-width: $sm-tablet) {
+        padding-left: 1.5rem;
       }
     }
 
@@ -45,6 +58,13 @@
         //   color: #435c35;
         color: #333;
 
+        //withut logo
+        color: white;
+
+        @media (max-width: $sm-tablet) {
+          display: none;
+        }
+
         &:last-child {
           //   color: blue;
           padding-right: 0;
@@ -54,6 +74,7 @@
       .active {
         //   color: orange;
         color: red;
+        color: #e6db14;
       }
     }
   }

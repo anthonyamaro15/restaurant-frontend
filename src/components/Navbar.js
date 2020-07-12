@@ -7,7 +7,14 @@ const Navbar = () => {
     <div className="navbar-wrapper">
       <div className="Navbar">
         <div className="logo-wrapper">
+          {/**
+       <img src={logo} alt="restaurant logo" />
+      */}
           <img src={logo} alt="restaurant logo" />
+
+          {/**
+       <h1>felipitos</h1>
+      */}
         </div>
         <nav className="links">
           <NavLink to="/" activeClassName="active">
