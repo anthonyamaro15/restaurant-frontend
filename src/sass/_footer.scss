@@ -1,0 +1,41 @@
+.Footer {
+  //   border: 1px solid red;
+  background: grey;
+
+  .footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 5rem 1rem 2rem;
+
+    nav {
+      // border: 1px solid blue;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+
+      .email,
+      .facebook {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        a {
+          display: block;
+          text-transform: none;
+          margin-top: 1rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      .facebook a {
+        font-size: 1.5rem;
+        color: red;
+      }
+    }
+    span {
+      text-align: center;
+      display: block;
+      font-size: 0.9rem;
+      text-transform: capitalize;
+    }
+  }
+}

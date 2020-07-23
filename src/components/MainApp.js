@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import MobileNavbar from "./MobileNavbar";
 import Header from "./Header";
 import Content from "./Content";
+import Footer from "./Footer";
 
 const MainApp = () => {
   return (
@@ -11,6 +12,7 @@ const MainApp = () => {
       <MobileNavbar />
       <Header />
       <Content />
+      <Footer />
     </div>
   );
 };
