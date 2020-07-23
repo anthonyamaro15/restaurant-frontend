@@ -194,8 +194,9 @@
 .Map-content {
   //   border: 1px solid red;
   margin-top: 1rem;
-  margin-bottom: 9rem;
+  margin-bottom: 11rem;
   background: grey;
+  padding: 1rem 0;
 
   h1 {
     text-align: center;
@@ -216,7 +217,7 @@
       padding: 0 1rem;
 
       &:first-child {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
       }
 
       .restaurant-desc {
