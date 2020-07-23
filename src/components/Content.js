@@ -1,5 +1,6 @@
 import React from "react";
 import image from "../imgs/jarritos.jpg";
+import Carausel from "./Carausel";
 
 const Content = () => {
   return (
@@ -41,10 +42,29 @@ const Content = () => {
           </div>
 
           <div className="menu-imgs">
-            <img src={image} alt="" />
-            <img src={image} alt="" />
-            <img src={image} alt="" />
-            <img src={image} alt="" />
+            <Carausel />
+          </div>
+        </div>
+      </div>
+
+      <div className="Map-content">
+        <h1>locations</h1>
+        <div className="map-wrapper">
+          <div className="restaurant-map">
+            <div className="restaurant-desc">
+              <h2>#one</h2>
+              <p>phone number: 702-454-3232</p>
+              <p>address</p>
+            </div>
+            <div className="map"></div>
+          </div>
+          <div className="restaurant-map">
+            <div className="restaurant-desc">
+              <h2>#two</h2>
+              <p>phone number: 702-454-3232</p>
+              <p>address</p>
+            </div>
+            <div className="map"></div>
           </div>
         </div>
       </div>

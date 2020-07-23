@@ -1,11 +1,11 @@
 .Content {
-  border: 1px solid red;
-  max-width: 1400px;
+  //   border: 1px solid red;
+  max-width: 1200px;
   margin: 9rem auto;
 
   h1 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     text-transform: capitalize;
     font-size: 2.4rem;
   }
@@ -17,9 +17,10 @@
 
     .special-img-wrapper {
       margin-right: 12rem;
+      // border: 1px solid blue;
       img {
-        width: 500px;
-        height: 350px;
+        width: 550px;
+        height: 320px;
         object-fit: cover;
       }
     }
@@ -81,7 +82,7 @@
   .med-content-inner {
     //  border: 1px solid blue;
     color: white;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
     height: 100%;
@@ -114,38 +115,54 @@
 }
 
 .lower-content {
-  border: 1px solid red;
-  max-width: 1400px;
-  margin: 9rem auto;
+  //   border: 1px solid red;
+  max-width: 1200px;
+  margin: 9rem auto 10rem;
   display: flex;
   flex-direction: column;
   padding: 1rem 1rem;
 
   h1 {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
     text-transform: capitalize;
     font-size: 2.4rem;
   }
 
   .lower-content-wrapper {
     display: flex;
-    //  justify-content: space-between;
+    justify-content: space-between;
 
     .menu-imgs {
-      margin-left: 12rem;
-      width: 500px;
-      height: 350px;
+      // margin-left: 12rem;
+      // width: 550px;
+      // height: 350px;
       // border: 1px solid red;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      img {
-        width: 240px;
-        //   border: 1px solid blue;
-        height: 160px;
-        object-fit: cover;
+      position: relative;
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: space-between;
+      // align-items: center;
+
+      .Carausel {
+        width: 550px;
+
+        img {
+          width: 100%;
+          //  border: 1px solid blue;
+          height: 320px;
+          object-fit: cover;
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.3);
+        }
       }
     }
 
@@ -169,6 +186,60 @@
 
       p {
         font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.Map-content {
+  //   border: 1px solid red;
+  margin-top: 1rem;
+  margin-bottom: 9rem;
+  background: grey;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    display: none;
+  }
+
+  .map-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    //  border: 1px solid blue;
+
+    .restaurant-map {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+
+      &:first-child {
+        margin-bottom: 2rem;
+      }
+
+      .restaurant-desc {
+        //   border: 1px solid blue;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+          font-size: 1.7rem;
+          text-transform: uppercase;
+          margin-bottom: 1.5rem;
+        }
+
+        p {
+          margin-bottom: 1.5rem;
+        }
+      }
+      .map {
+        border: 1px solid red;
+        width: 55%;
+        height: 300px;
       }
     }
   }
