@@ -9,12 +9,12 @@
   right: 0;
 
   .Navbar {
-    //   border: 1px solid red;
+    //  border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    max-width: 1400px;
+    max-width: 75%;
     margin: 0 auto;
 
     // without logo
@@ -22,7 +22,7 @@
     //  height: 7vh;
 
     @media (max-width: $tablet) {
-      max-width: 900px;
+      max-width: 950px;
     }
     //  position: fixed;
     //  top: 0;
@@ -38,8 +38,9 @@
         height: 90px;
 
         @media (max-width: $sm-tablet) {
-          width: 80px;
-          height: 80px;
+          width: 70px;
+          height: 70px;
+          margin-top: 0.5rem;
         }
       }
       @media (max-width: $sm-tablet) {
