@@ -1,0 +1,71 @@
+.FormModal {
+  //   color: red;
+
+  button {
+    color: #f4f4f4;
+    border: none;
+    background: none;
+    //  border: 1px solid yellow;
+    padding: 0 1rem;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.form-wrapper {
+  h2 {
+    text-align: center;
+    //  border: 1px solid red;
+    padding: 1rem 0 2rem;
+  }
+
+  form {
+    //  border: 2px solid red;
+    font-size: 1.2rem;
+    font-weight: 300;
+    label {
+      display: block;
+      position: relative;
+      margin-bottom: 1.8rem;
+
+      // border: 1px solid blue;
+      input {
+        display: block;
+        font-weight: 300;
+        padding: 0.2rem 0.4rem;
+        width: 400px;
+        // margin-bottom: 1rem;
+      }
+      .error {
+        display: inline-block;
+        //   border: 1px solid red;
+        font-size: 0.9rem;
+        position: absolute;
+        top: 2.3rem;
+        left: 0.1rem;
+        display: none;
+      }
+    }
+
+    button {
+      // color: red;
+      // margin-top: 1rem;
+      border: 1px solid red;
+      padding: 0.3rem 1.3rem;
+      text-transform: uppercase;
+      font-size: 1rem;
+      background: none;
+    }
+  }
+
+  span {
+    margin-top: 1rem;
+    //  font-size: 0.9rem;
+    //  font-weight: 300;
+  }
+}
