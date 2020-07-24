@@ -1,8 +1,10 @@
 import React from "react";
 import logo from "../imgs/logo.jpeg";
 import { NavLink } from "react-router-dom";
+import Modal from "./Modal";
 
 const Navbar = () => {
+  const toggleForm = () => {};
   return (
     <div className="navbar-wrapper">
       <div className="Navbar">
@@ -17,15 +19,15 @@ const Navbar = () => {
       */}
         </div>
         <nav className="links">
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" exact activeClassName="active">
             Home
           </NavLink>
-          <NavLink to="/locations" activeClassName="active">
-            locations
+          <NavLink to="/menu" exact activeClassName="active">
+            menu
           </NavLink>
-          <NavLink to="/login" activeClassName="active">
-            admin login
-          </NavLink>
+          <div className="FormModal">
+            <Modal />
+          </div>
         </nav>
       </div>
     </div>

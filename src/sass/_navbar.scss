@@ -49,8 +49,11 @@
     }
 
     .links {
-      //  border: 1px solid red;
+      // border: 1px solid red;
       text-transform: capitalize;
+      display: flex;
+      align-items: center;
+
       a {
         padding: 0.5rem 1rem;
         // border: 1px solid blue;
@@ -66,10 +69,10 @@
           display: none;
         }
 
-        &:last-child {
-          //   color: blue;
-          padding-right: 0;
-        }
+        //   &:last-child {
+        //     //   color: blue;
+        //     padding-right: 0.5;
+        //   }
       }
 
       .active {
