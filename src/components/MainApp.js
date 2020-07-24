@@ -1,4 +1,7 @@
 import React from "react";
+import { Route } from "react-router-dom";
+import PrivateRoute from "../privateRoute/PrivateRoute";
+import Admin from "./admin/Admin";
 import Navbar from "./Navbar";
 import MobileNavbar from "./MobileNavbar";
 import Header from "./Header";
@@ -10,8 +13,11 @@ const MainApp = () => {
     <div>
       <Navbar />
       <MobileNavbar />
-      <Header />
-      <Content />
+      <Route exact path="/">
+        <Header />
+        <Content />
+      </Route>
+      <PrivateRoute component={Admin} />
       <Footer />
     </div>
   );
