@@ -6,15 +6,15 @@ import { Link, useHistory, useRouteMatch } from "react-router-dom";
 
 const ForgotPassword = () => {
   const { register, handleSubmit, errors } = useForm();
+  const history = useHistory();
 
   const onSubmit = (value) => {
-     console.log(value)
     axiosWithAuth()
       .patch('/api/auth/forgot', value)
          .then(res => {
             console.log(res.data);
             alert(res.data.message)
-        localStorage.setItem("message", JSON.stringify(res.data.message));
+        history.push('/');
 
          }).catch(err => {
             console.log(err);

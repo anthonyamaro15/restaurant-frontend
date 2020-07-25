@@ -1,9 +1,13 @@
 import React from "react";
+import {useForm} from 'react-hook-form'
 
 const Admin = () => {
+   const {register, handleSubmit, errrors} = useForm();
   return (
     <div>
-      <h2>hello</h2>
+      <form>
+         
+      </form>
     </div>
   );
 };
