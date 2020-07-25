@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import {axiosWithAuth} from '../../utils/axiosWithAuth';
+import { axiosWithAuth } from "../../utils/axiosWithAuth";
 import { Link, useHistory, useRouteMatch } from "react-router-dom";
 
-
 const ForgotPassword = () => {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors, reset } = useForm();
   const history = useHistory();
 
   const onSubmit = (value) => {
     axiosWithAuth()
-      .patch('/api/auth/forgot', value)
-         .then(res => {
-            console.log(res.data);
-            alert(res.data.message)
-        history.push('/');
-
-         }).catch(err => {
-            console.log(err);
-         })
+      .patch("/api/auth/forgot", value)
+      .then((res) => {
+        console.log(res.data);
+        alert(res.data.message);
+        history.push("/");
+        reset();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div className="ForgotPassword">
