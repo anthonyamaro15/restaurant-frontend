@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { axiosWithAuth } from "../../utils/axiosWithAuth";
-import { Link, useHistory, useRouteMatch } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import Navbar from "../Navbar";
+import MobileNavar from "../MobileNavbar";
 
 const ForgotPassword = () => {
   const { register, handleSubmit, errors, reset } = useForm();
@@ -21,21 +23,25 @@ const ForgotPassword = () => {
       });
   };
   return (
-    <div className="ForgotPassword">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="email">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="enter password"
-            ref={register}
-          />
-          <p className="error">erorr here</p>
-        </label>
-        <button type="submit">reset</button>
-      </form>
-    </div>
+    <>
+      <Navbar />
+      <MobileNavar />
+      <div className="ForgotPassword">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <label htmlFor="email">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="enter password"
+              ref={register}
+            />
+            <p className="error">erorr here</p>
+          </label>
+          <button type="submit">reset</button>
+        </form>
+      </div>
+    </>
   );
 };
 

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { axiosWithAuth } from "../../utils/axiosWithAuth";
+import AdminNavbar from "./AdminNavbar";
 
 const Admin = () => {
   const { register, handleSubmit, errors, reset } = useForm();
@@ -8,8 +10,15 @@ const Admin = () => {
 
   const onSubmit = (values) => {
     const newValues = { ...values, img_url };
-    console.log(newValues);
-    reset();
+    axiosWithAuth()
+      .post("/api/items/add", newValues)
+      .then((res) => {
+        alert(res.data.message);
+        reset();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const uploadImage = (e) => {
@@ -29,6 +38,7 @@ const Admin = () => {
   };
   return (
     <div className="Admin">
+      <AdminNavbar />
       <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="name">
           <input

@@ -8,25 +8,32 @@ import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
 import ForgotPassword from "./admin/ForgotPassword";
-import ResetPassword  from './admin/ResetPassword';
+import ResetPassword from "./admin/ResetPassword";
+import Menu from "./Menu";
 
 const MainApp = () => {
   return (
     <div>
-      <Navbar />
-      <MobileNavbar />
       <Route exact path="/">
+        <Navbar />
+        <MobileNavbar />
         <Header />
         <Content />
       </Route>
-      <PrivateRoute path="/admin" exact component={Admin} />
+      <PrivateRoute path="/admin" exact component={Admin}></PrivateRoute>
       <Route exact path="/forgot">
         <ForgotPassword />
       </Route>
 
-      <Route exact path="/api/auth/resetpassword/:token" component={ResetPassword}/>
-      
+      <Route
+        exact
+        path="/api/auth/resetpassword/:token"
+        component={ResetPassword}
+      />
 
+      <Route exact path="/menu">
+        <Menu />
+      </Route>
       <Footer />
     </div>
   );
