@@ -8,10 +8,24 @@ import { Link, useHistory, useRouteMatch, useParams } from "react-router-dom";
 const ResetPassword = () => {
    const {register, handleSubmit, errrors} = useForm();
    const {token} = useParams();
-console.log('here ', token);
+   const history = useHistory();
 
    const onSubmit = (value) => {
-      console.log(value);
+      const {password} = value;
+      const newPass = {
+            password
+      }
+     
+      axiosWithAuth()
+         .patch(`/api/auth/resetpassword/${token}`, newPass)
+            .then(res => {
+               console.log('res here ', res.data);
+               alert(res.data.message);
+               history.push('/')
+
+            }).catch(err => {
+               console.log(err);
+            })
    }
    return (
       <div className="ResetPassword">
@@ -23,7 +37,7 @@ console.log('here ', token);
            </label> 
 
              <label htmlFor="rpassword">
-            <input type="password" name="password" id="rpassword" ref={register} placeholder="re enter password" />
+            <input type="password" name="rpassword" id="rpassword" ref={register} placeholder="re enter password" />
              <p className="error">erorr here</p>
            </label> 
          

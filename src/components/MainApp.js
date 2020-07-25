@@ -19,14 +19,12 @@ const MainApp = () => {
         <Header />
         <Content />
       </Route>
-      <PrivateRoute component={Admin} />
+      <PrivateRoute path="/admin" exact component={Admin} />
       <Route exact path="/forgot">
         <ForgotPassword />
       </Route>
 
-
-      <PrivateRoute exact path="/api/auth/resetpassword/:token" component={ResetPassword}/>
-      
+      <Route exact path="/api/auth/resetpassword/:token" component={ResetPassword}/>
       
 
       <Footer />
