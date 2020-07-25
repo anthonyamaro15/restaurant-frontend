@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { useForm } from "react-hook-form";
 import { Link, useHistory } from "react-router-dom";
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 const FormModal = () => {
   const [open, setOpen] = useState(false);
@@ -10,8 +12,15 @@ const FormModal = () => {
   const history = useHistory();
 
   const onSubmit = (value) => {
-    console.log(value);
-    history.push("/admin");
+    axiosWithAuth()
+      .post("/api/auth/login", value)
+      .then((res) => {
+        localStorage.setItem("token", JSON.stringify(res.data.token));
+        history.push("/admin");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     setOpen(false);
   };
 
@@ -63,3 +72,5 @@ const FormModal = () => {
 };
 
 export default FormModal;
+
+// api/items/add
