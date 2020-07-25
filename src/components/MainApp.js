@@ -8,6 +8,7 @@ import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
 import ForgotPassword from "./admin/ForgotPassword";
+import ResetPassword  from './admin/ResetPassword';
 
 const MainApp = () => {
   return (
@@ -22,6 +23,11 @@ const MainApp = () => {
       <Route exact path="/forgot">
         <ForgotPassword />
       </Route>
+
+
+      <PrivateRoute exact path="/api/auth/resetpassword/:token" component={ResetPassword}/>
+      
+      
 
       <Footer />
     </div>
