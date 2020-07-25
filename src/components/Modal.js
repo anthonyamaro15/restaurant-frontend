@@ -63,7 +63,10 @@ const FormModal = () => {
             <button type="submit">login</button>
           </form>
           <span>
-            Forgot password? <Link to="/forgot">Click here</Link>{" "}
+            Forgot password?{" "}
+            <Link to="/forgot" onClick={closeModal}>
+              Click here
+            </Link>{" "}
           </span>
         </div>
       </Modal>
