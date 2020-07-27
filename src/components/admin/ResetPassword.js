@@ -1,10 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { axiosWithAuth } from "../../utils/axiosWithAuth";
-import { Link, useHistory, useRouteMatch, useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 const ResetPassword = () => {
-  const { register, handleSubmit, errrors, reset } = useForm();
+  const { register, handleSubmit, errors, reset } = useForm();
   const { token } = useParams();
   const history = useHistory();
 

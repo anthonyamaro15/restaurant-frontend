@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Modal from "./Modal";
 
 const Navbar = () => {
-  const toggleForm = () => {};
+  //   const toggleForm = () => {};
   return (
     <div className="navbar-wrapper">
       <div className="Navbar">
