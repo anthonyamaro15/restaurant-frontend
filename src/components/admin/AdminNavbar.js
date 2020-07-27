@@ -1,14 +1,11 @@
 import React from "react";
 import logo from "../../imgs/logo.jpeg";
-import { NavLink, useHistory } from "react-router-dom";
-
-import { useRouteMatch } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Navbar = () => {
-  const rout = useRouteMatch();
   const history = useHistory();
 
-  const toggleForm = () => {};
+  //   const toggleForm = () => {};
 
   const logout = () => {
     localStorage.clear();
