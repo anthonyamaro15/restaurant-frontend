@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { useForm } from "react-hook-form";
