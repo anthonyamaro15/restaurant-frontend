@@ -37,6 +37,24 @@ span {
 
 .MainApp {
   background: rgb(228, 223, 223);
+  background: url("../imgs/cooked-food-on-blue-plate-2092507.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 10000;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(228, 223, 223, 0.9);
+
+    z-index: -1;
+  }
 }
 
 h3,
