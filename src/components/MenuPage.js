@@ -13,12 +13,24 @@ const MenuHeader = () => {
       </header>
       <section className="MenuPage-section">
         <div className="menu-btns">
-          <NavLink to="/menu/combination">combination plates</NavLink>
-          <NavLink to="/menu/alacarte">a la carte</NavLink>
-          <NavLink to="/menu/sideorder">side orders</NavLink>
-          <NavLink to="/menu/breakfast">breakfast</NavLink>
-          <NavLink to="/menu/daily">daily specials</NavLink>
-          <NavLink to="/menu/combos">super combos</NavLink>
+          <NavLink exact to="/menu/combination" activeClassName="active-m">
+            combination plates
+          </NavLink>
+          <NavLink exact to="/menu/alacarte" activeClassName="active-m">
+            a la carte
+          </NavLink>
+          <NavLink exact to="/menu/sideorder" activeClassName="active-m">
+            side orders
+          </NavLink>
+          <NavLink exact to="/menu/breakfast" activeClassName="active-m">
+            breakfast
+          </NavLink>
+          <NavLink exact to="/menu/daily" activeClassName="active-m">
+            daily specials
+          </NavLink>
+          <NavLink exact to="/menu/combos" activeClassName="active-m">
+            super combos
+          </NavLink>
         </div>
 
         <div className="Display-items">
