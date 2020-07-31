@@ -47,7 +47,7 @@ const Content = () => {
         </div>
       </div>
 
-      <div className="Map-content">
+      <div className="Map-content" id="locations">
         <h1>locations</h1>
         <div className="map-wrapper">
           <div className="restaurant-map">

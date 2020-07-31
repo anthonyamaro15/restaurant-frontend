@@ -11,24 +11,28 @@ const ResetPassword = () => {
   const history = useHistory();
 
   const onSubmit = (value) => {
-    const { password } = value;
-    const newPass = {
-      password,
-    };
+    const { password, rpassword } = value;
+    if (password !== rpassword) {
+      setError("Passwords do not match!");
+    } else {
+      const newPass = {
+        password,
+      };
 
-    setLoading(true);
-    axiosWithAuth()
-      .patch(`/api/auth/resetpassword/${token}`, newPass)
-      .then((res) => {
-        alert(res.data.message);
-        history.push("/");
-        reset();
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.response.data.errMessage);
-        setLoading(false);
-      });
+      setLoading(true);
+      axiosWithAuth()
+        .patch(`/api/auth/resetpassword/${token}`, newPass)
+        .then((res) => {
+          alert(res.data.message);
+          history.push("/");
+          reset();
+          setLoading(false);
+        })
+        .catch((err) => {
+          setError(err.response.data.errMessage);
+          setLoading(false);
+        });
+    }
   };
   return (
     <div className="ResetPassword">
@@ -38,10 +42,11 @@ const ResetPassword = () => {
             type="password"
             name="password"
             id="password"
-            ref={register}
+            ref={register({ required: true })}
             placeholder="enter password"
           />
-          <p className="error">erorr here</p>
+          <p className="error">{errors.password && "Password Require"}</p>
+          <p className="error">{error && error}</p>
         </label>
 
         <label htmlFor="rpassword">
@@ -49,13 +54,22 @@ const ResetPassword = () => {
             type="password"
             name="rpassword"
             id="rpassword"
-            ref={register}
+            ref={register({ required: true })}
             placeholder="re enter password"
           />
-          <p className="error">erorr here</p>
+          <p className="error">
+            {errors.rpassword && "Comfirm Password Require"}
+          </p>
+          <p className="error">{error && error}</p>
         </label>
 
-        <button type="submit">reset</button>
+        <button
+          type="submit"
+          disabled={loading}
+          className={loading ? "isLoading" : ""}
+        >
+          {loading ? "reseting.." : "reset"}
+        </button>
       </form>
     </div>
   );
