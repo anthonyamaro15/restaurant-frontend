@@ -12,13 +12,13 @@ const Content = () => {
         <h1>daily specials</h1>
 
         <div className="special-wrapper">
-          <div className="special-img-wrapper">
-            <img src={image} alt="" />
-          </div>
           <div className="special-description">
             <h2>special's name</h2>
             <span>$5.99</span>
             <p>specials description </p>
+          </div>
+          <div className="special-img-wrapper">
+            <img src={image} alt="" />
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 .navbar-wrapper {
   width: 100%;
-  //   background: #f4f4f4;
+  //  background: #f4f4f4;
   z-index: 100;
   //   border: 1px solid red;
   position: fixed;
@@ -87,7 +87,8 @@
 // scrolling navbar class
 
 .scroll-color {
-  background: black;
+  background: rgba(0, 0, 0, 0.9);
+  background: rgba(67, 92, 53, 0.9);
   transition: all 0.5s ease;
   padding: 0.5rem 0;
 

@@ -13,7 +13,7 @@ import MainMenu from "./MainMenu";
 
 const MainApp = () => {
   return (
-    <div>
+    <div className="MainApp">
       <Route exact path="/">
         <Navbar />
         <MobileNavbar />

@@ -5,7 +5,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background: rgba(0, 0, 0, 0.5);
+  //   background: rgba(0, 0, 0, 0.5);
+  //   z-index: 10;
+  background: url("../imgs/xavier-crook-wIqpmuOloVA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   &::after {
     position: absolute;
@@ -15,11 +20,12 @@
     width: 100%;
     content: "";
     //  background: rgba(0, 0, 0, 0.6);
-    background: url("../imgs/xavier-crook-wIqpmuOloVA-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
+    //  background: url("../imgs/xavier-crook-wIqpmuOloVA-unsplash.jpg");
+    //  background-size: cover;
+    //  background-position: center;
+    //  background-repeat: no-repeat;
+    background: rgba(0, 0, 0, 0.5);
+    //  z-index: -1;
   }
 
   .inner-wrapper {
@@ -27,6 +33,7 @@
     margin: -7rem auto 0;
     color: white;
     padding: 0 1rem;
+    z-index: 10;
 
     @media (max-width: $tablet) {
       max-width: 700px;
