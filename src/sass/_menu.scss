@@ -34,17 +34,18 @@
   .MenuPage-section {
     max-width: 1200px;
     margin: 9rem auto;
-    border: 1px solid red;
+    //  border: 1px solid red;
     padding: 0 1rem;
 
     .menu-btns {
       display: flex;
       justify-content: space-between;
       a {
-        border: 1px solid red;
+        //   border: 1px solid red;
         padding: 0.5rem 1rem;
         font-size: 1.2rem;
         text-transform: capitalize;
+        background: rgb(218, 209, 209);
       }
     }
   }
@@ -53,15 +54,16 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 7rem;
+    margin-top: 9rem;
     .SingleItem {
-      border: 1px solid red;
+      // border: 1px solid red;
       width: 45%;
       margin-bottom: 3rem;
 
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: rgb(219, 214, 214);
 
       img {
         width: 200px;
@@ -71,7 +73,13 @@
 
       .description-plate {
         //   border: 1px solid blue;
-        width: 50%;
+        width: 55%;
+
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          text-transform: capitalize;
+        }
       }
     }
   }

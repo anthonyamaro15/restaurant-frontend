@@ -1,8 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import SingleItems from "./SingleItem";
 
 const MenuHeader = () => {
+  //   const { category } = useParams();
+  // category to toggle menu items
+
   return (
     <div className="MenuPage">
       <header>
