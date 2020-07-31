@@ -55,7 +55,7 @@
       align-items: center;
 
       a {
-        padding: 0.5rem 1rem;
+        padding: 0.3rem 1rem;
         // border: 1px solid blue;
         margin-left: 0.5rem;
         font-size: 1.2rem;
@@ -87,8 +87,9 @@
 // scrolling navbar class
 
 .scroll-color {
-  background: rgba(0, 0, 0, 0.9);
-  background: rgba(67, 92, 53, 0.9);
+  //   background: rgba(0, 0, 0, 0.9);
+  //   background: rgba(67, 92, 53, 0.9);
+  background: #f4f4f4;
   transition: all 0.5s ease;
   padding: 0.5rem 0;
 
@@ -102,10 +103,19 @@
     .links {
       a {
         font-size: 1.1rem;
+        color: rgb(67, 92, 53);
+        //   padding: 0.3rem 1rem;
+      }
+
+      .active {
+        //   border: 2px solid #e6db14;
+        //   color: #333;
+        //   border-radius: 4px;
       }
 
       button {
         font-size: 1.1rem;
+        color: rgb(67, 92, 53);
       }
     }
   }
