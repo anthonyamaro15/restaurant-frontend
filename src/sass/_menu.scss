@@ -1,4 +1,4 @@
-.MenuHeader {
+.MenuPage {
   header {
     //  border: 1px solid red;
     height: 30vh;
@@ -28,6 +28,51 @@
       color: white;
       text-transform: uppercase;
       font-size: 2.3rem;
+    }
+  }
+
+  .MenuPage-section {
+    max-width: 1200px;
+    margin: 9rem auto;
+    border: 1px solid red;
+    padding: 0 1rem;
+
+    .menu-btns {
+      display: flex;
+      justify-content: space-between;
+      a {
+        border: 1px solid red;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .Display-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+    .SingleItem {
+      border: 1px solid red;
+      width: 45%;
+      margin-bottom: 3rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .description-plate {
+        //   border: 1px solid blue;
+        width: 50%;
+      }
     }
   }
 }
