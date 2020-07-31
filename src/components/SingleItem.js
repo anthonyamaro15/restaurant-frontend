@@ -9,7 +9,7 @@ const SingleItem = () => {
       </div>
       <div className="description-plate">
         <h3>plate name</h3>
-        <p>price</p>
+        <p>$5.99</p>
         <p>description</p>
       </div>
     </div>

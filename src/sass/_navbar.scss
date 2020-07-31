@@ -83,3 +83,29 @@
     }
   }
 }
+
+// scrolling navbar class
+
+.scroll-color {
+  background: black;
+  transition: all 0.5s ease;
+  padding: 0.5rem 0;
+
+  .Navbar {
+    .logo-wrapper {
+      img {
+        width: 75px;
+        height: 75px;
+      }
+    }
+    .links {
+      a {
+        font-size: 1.1rem;
+      }
+
+      button {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
