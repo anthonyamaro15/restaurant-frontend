@@ -9,7 +9,7 @@ import Content from "./Content";
 import Footer from "./Footer";
 import ForgotPassword from "./admin/ForgotPassword";
 import ResetPassword from "./admin/ResetPassword";
-import Menu from "./Menu";
+import MainMenu from "./MainMenu";
 
 const MainApp = () => {
   return (
@@ -32,7 +32,7 @@ const MainApp = () => {
       />
 
       <Route exact path="/menu">
-        <Menu />
+        <MainMenu />
       </Route>
       <Footer />
     </div>

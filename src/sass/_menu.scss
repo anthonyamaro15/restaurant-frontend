@@ -1,0 +1,33 @@
+.MenuHeader {
+  header {
+    //  border: 1px solid red;
+    height: 30vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      content: "";
+      background: url("../imgs/cooked-food-on-blue-plate-2092507.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    h1 {
+      color: white;
+      text-transform: uppercase;
+      font-size: 2.3rem;
+    }
+  }
+}
