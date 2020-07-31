@@ -1,17 +1,16 @@
 import React from "react";
 import Navbar from "./Navbar";
 import MobileNavar from "./MobileNavbar";
-import MenuHeader from "./MenuHeader";
+import MenuPage from "./MenuPage";
 
-const Menu = () => {
+const MainMenu = () => {
   return (
     <div>
       <Navbar />
       <MobileNavar />
-      <MenuHeader />
-      <h2>Menu</h2>
+      <MenuPage />
     </div>
   );
 };
 
-export default Menu;
+export default MainMenu;
