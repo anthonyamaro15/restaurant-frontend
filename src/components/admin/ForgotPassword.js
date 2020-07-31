@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { axiosWithAuth } from "../../utils/axiosWithAuth";
 import { useHistory } from "react-router-dom";
@@ -7,19 +7,23 @@ import MobileNavar from "../MobileNavbar";
 
 const ForgotPassword = () => {
   const { register, handleSubmit, errors, reset } = useForm();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const history = useHistory();
 
   const onSubmit = (value) => {
+    setLoading(true);
     axiosWithAuth()
       .patch("/api/auth/forgot", value)
       .then((res) => {
-        console.log(res.data);
         alert(res.data.message);
         history.push("/");
         reset();
+        setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        setError(err.response.data.errMessage);
+        setLoading(false);
       });
   };
   return (
@@ -34,11 +38,18 @@ const ForgotPassword = () => {
               id="email"
               name="email"
               placeholder="enter password"
-              ref={register}
+              ref={register({ required: true })}
             />
-            <p className="error">erorr here</p>
+            <p className="error">{errors.email && "Email Require"}</p>
+            <p className="error">{error && error}</p>
           </label>
-          <button type="submit">reset</button>
+          <button
+            type="submit"
+            className={loading ? "isLoading" : ""}
+            disabled={loading}
+          >
+            {loading ? "sending..." : "reset"}
+          </button>
         </form>
       </div>
     </>

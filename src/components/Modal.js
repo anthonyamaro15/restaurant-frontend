@@ -8,20 +8,25 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 /// adding comment
 const FormModal = () => {
   const [open, setOpen] = useState(false);
-  const { register, handleSubmit, errrors } = useForm();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const { register, handleSubmit, errors } = useForm();
   const history = useHistory();
 
   const onSubmit = (value) => {
+    setLoading(true);
     axiosWithAuth()
       .post("/api/auth/login", value)
       .then((res) => {
         localStorage.setItem("token", JSON.stringify(res.data.token));
         history.push("/admin");
+        setLoading(false);
+        setOpen(false);
       })
       .catch((err) => {
-        console.log(err);
+        setError(err.response.data.errMessage);
+        setLoading(false);
       });
-    setOpen(false);
   };
 
   const toggleBtn = () => {
@@ -52,9 +57,10 @@ const FormModal = () => {
                 type="email"
                 name="email"
                 placeholder="email"
-                ref={register}
+                ref={register({ required: true })}
               />
-              <p className="error">erorr here</p>
+              <p className="error">{errors.email && "Email require"}</p>
+              <p className="error">{error && error}</p>
             </label>
 
             <label htmlFor="password">
@@ -62,12 +68,19 @@ const FormModal = () => {
                 type="password"
                 name="password"
                 placeholder="password"
-                ref={register}
+                ref={register({ required: true })}
               />
-              <p className="error">erorr here</p>
+              <p className="error">{errors.password && "Password Require"}</p>
+              <p className="error">{error && error}</p>
             </label>
 
-            <button type="submit">login</button>
+            <button
+              type="submit"
+              className={loading ? "isLoading" : ""}
+              disabled={loading}
+            >
+              {loading ? "loging in" : "login"}
+            </button>
           </form>
           <span>
             Forgot password? <button onClick={redirectTo}>Click here</button>{" "}
