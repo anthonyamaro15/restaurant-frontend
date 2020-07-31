@@ -1,13 +1,16 @@
 .Content {
   //   border: 1px solid red;
   max-width: 1200px;
-  margin: 9rem auto;
+  margin: 9rem auto 11rem;
 
   h1 {
     text-align: center;
     margin-bottom: 4rem;
     text-transform: capitalize;
     font-size: 2.4rem;
+    //  color: #e6db14;
+    color: rgb(67, 92, 53);
+    //  display: none;
   }
 
   .special-wrapper {
@@ -23,7 +26,7 @@
       // border: 1px solid blue;
       img {
         width: 550px;
-        height: 350px;
+        height: 400px;
         object-fit: cover;
       }
     }
@@ -31,22 +34,25 @@
     .special-description {
       // border: 1px solid red;
       width: 45%;
-      margin-left: 3rem;
+      margin-left: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       // align-items: flex-end;
-      margin-right: 3rem;
+      // margin-right: 2rem;
 
       h2 {
         margin-bottom: 1.5rem;
         text-transform: uppercase;
         //   font-size: 1.4rem;
+        font-size: 1.7rem;
       }
 
       span {
         margin-bottom: 1.5rem;
         font-size: 1.2rem;
+        color: rgb(67, 92, 53);
+        font-weight: bold;
       }
 
       p {
@@ -107,6 +113,7 @@
     h2 {
       margin-bottom: 1.5rem;
       text-transform: uppercase;
+      // color: red;
     }
 
     p {
@@ -132,7 +139,7 @@
 .lower-content {
   //   border: 1px solid red;
   max-width: 1200px;
-  margin: 9rem auto 10rem;
+  margin: 9rem auto 11rem;
   display: flex;
   flex-direction: column;
   padding: 1rem 1rem;
@@ -142,6 +149,8 @@
     margin-bottom: 6rem;
     text-transform: capitalize;
     font-size: 2.4rem;
+    color: rgb(67, 92, 53);
+    //  display: none;
   }
 
   .lower-content-wrapper {
@@ -169,7 +178,7 @@
         img {
           width: 100%;
           //  border: 1px solid blue;
-          height: 350px;
+          height: 400px;
           object-fit: cover;
         }
 
@@ -191,21 +200,24 @@
       // border: 1px solid red;
       flex-direction: column;
       justify-content: center;
-      margin-left: 3rem;
+      margin-left: 2rem;
 
       h2 {
         margin-bottom: 1.5rem;
         text-transform: uppercase;
-        //   font-size: 1.4rem;
+        font-size: 1.7rem;
       }
 
       span {
         margin-bottom: 1.5rem;
         font-size: 1.2rem;
+        font-weight: bold;
+        color: rgb(67, 92, 53);
       }
 
       p {
         font-size: 1.2rem;
+        //   font-weight: 300;
       }
     }
   }
@@ -220,6 +232,24 @@
 
   padding: 1rem 0;
 
+  position: relative;
+  background: url("../imgs/jarritos-mexican-soda-5n7FuwS6dw4-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
   h1 {
     text-align: center;
     margin-bottom: 4rem;
@@ -232,6 +262,7 @@
     max-width: 1200px;
     margin: 0 auto;
     //  border: 1px solid blue;
+    z-index: 100;
 
     .restaurant-map {
       display: flex;
@@ -250,13 +281,25 @@
         justify-content: center;
 
         h2 {
-          font-size: 1.7rem;
+          font-size: 1.5rem;
           text-transform: uppercase;
           margin-bottom: 1.5rem;
+          color: white;
         }
 
-        p {
-          margin-bottom: 1.5rem;
+        address {
+          font-size: 1.1rem;
+          a {
+            margin-bottom: 1.5rem;
+            // color: #e6db14;
+            color: white;
+          }
+          span {
+            display: block;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 300;
+          }
         }
       }
       .map {
