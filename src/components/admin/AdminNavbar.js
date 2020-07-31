@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../imgs/logo.jpeg";
 import { useHistory } from "react-router-dom";
 
@@ -7,12 +7,32 @@ const Navbar = () => {
 
   //   const toggleForm = () => {};
 
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 3) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+
+      if (window.scrollY === 0) {
+        setScrolling(false);
+      }
+    });
+  }, []);
+
+  const isUserScrolling = scrolling
+    ? "navbar-wrapper scroll-color"
+    : "navbar-wrapper";
+
   const logout = () => {
     localStorage.clear();
     history.push("/");
   };
   return (
-    <div className="navbar-wrapper">
+    <div className={isUserScrolling}>
       <div className="Navbar">
         <div className="logo-wrapper">
           {/**

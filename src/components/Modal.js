@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { useForm } from "react-hook-form";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 /// adding comment
@@ -30,6 +30,13 @@ const FormModal = () => {
 
   const closeModal = () => {
     setOpen(false);
+  };
+
+  const redirectTo = () => {
+    setOpen(false);
+
+    history.push("/forgot");
+    window.location.reload(true);
   };
   return (
     <div>
@@ -63,10 +70,7 @@ const FormModal = () => {
             <button type="submit">login</button>
           </form>
           <span>
-            Forgot password?{" "}
-            <Link to="/forgot" onClick={closeModal}>
-              Click here
-            </Link>{" "}
+            Forgot password? <button onClick={redirectTo}>Click here</button>{" "}
           </span>
         </div>
       </Modal>
