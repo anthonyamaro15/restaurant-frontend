@@ -53,16 +53,20 @@ const Content = () => {
           <div className="restaurant-map">
             <div className="restaurant-desc">
               <h2>#one</h2>
-              <p>phone number: 702-454-3232</p>
-              <p>address</p>
+              <address>
+                <a href="tel:+13115552368">(311) 555-2368</a>
+                <span>address: afdfafdf</span>
+              </address>
             </div>
             <div className="map"></div>
           </div>
           <div className="restaurant-map">
             <div className="restaurant-desc">
               <h2>#two</h2>
-              <p>phone number: 702-454-3232</p>
-              <p>address</p>
+              <address>
+                <a href="tel:+13115552368">(311) 555-2368</a>
+                <span>address: afdfafdf</span>
+              </address>
             </div>
             <div className="map"></div>
           </div>

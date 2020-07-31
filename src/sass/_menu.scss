@@ -88,19 +88,35 @@
       border-radius: 4px;
 
       img {
-        width: 220px;
-        height: 170px;
+        width: 200px;
+        height: 200px;
         object-fit: cover;
+        //   border: 1px solid red;
       }
 
       .description-plate {
         //   border: 1px solid blue;
-        width: 55%;
+        width: 50%;
+        margin-left: 2rem;
 
         h3 {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
           margin-bottom: 1rem;
           text-transform: capitalize;
+        }
+
+        .description {
+          font-weight: 300;
+          font-size: 1rem;
+          //  display: flex;
+          //  flex-wrap: wrap;
+          //  border: 1px solid green;
+        }
+
+        .price {
+          font-weight: bold;
+          font-size: 1.1rem;
+          color: rgb(67, 92, 53);
         }
       }
     }
