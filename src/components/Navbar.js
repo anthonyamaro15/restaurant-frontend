@@ -22,7 +22,7 @@ const Navbar = () => {
           <NavLink to="/" exact activeClassName="active">
             Home
           </NavLink>
-          <NavLink to="/menu" exact activeClassName="active">
+          <NavLink to="/menu/combination" exact activeClassName="active">
             menu
           </NavLink>
           <div className="FormModal">

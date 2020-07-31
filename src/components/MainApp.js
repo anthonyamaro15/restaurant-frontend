@@ -31,7 +31,7 @@ const MainApp = () => {
         component={ResetPassword}
       />
 
-      <Route exact path="/menu">
+      <Route exact path="/menu/:category">
         <MainMenu />
       </Route>
       <Footer />
