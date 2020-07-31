@@ -26,11 +26,10 @@ const MainApp = () => {
         <ForgotPassword />
       </Route>
 
-      <Route
-        exact
-        path="/api/auth/resetpassword/:token"
-        component={ResetPassword}
-      />
+      <Route exact path="/api/auth/resetpassword/:token">
+        <Navbar />
+        <ResetPassword />
+      </Route>
 
       <Route exact path="/menu/:category">
         <MainMenu />

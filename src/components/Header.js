@@ -7,7 +7,7 @@ const Header = () => {
       <div className="inner-wrapper">
         <h1>best mexican food in town!</h1>
         <p>Fresh authentic mexican food everyday.</p>
-        <Link to="/">see menu</Link>
+        <a href="#locations">locations</a>
       </div>
     </header>
   );
