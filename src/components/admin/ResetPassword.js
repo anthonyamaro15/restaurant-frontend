@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { axiosWithAuth } from "../../utils/axiosWithAuth";
 import { useHistory, useParams } from "react-router-dom";
 
 const ResetPassword = () => {
   const { register, handleSubmit, errors, reset } = useForm();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const { token } = useParams();
   const history = useHistory();
 
@@ -14,16 +16,18 @@ const ResetPassword = () => {
       password,
     };
 
+    setLoading(true);
     axiosWithAuth()
       .patch(`/api/auth/resetpassword/${token}`, newPass)
       .then((res) => {
-        console.log("res here ", res.data);
         alert(res.data.message);
         history.push("/");
         reset();
+        setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        setError(err.response.data.errMessage);
+        setLoading(false);
       });
   };
   return (

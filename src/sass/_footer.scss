@@ -25,12 +25,15 @@
           text-transform: none;
           margin-top: 1rem;
           font-size: 1.1rem;
+          color: rgb(67, 92, 53);
+          //  text-decoration: underline;
         }
       }
 
       .facebook a {
         font-size: 1.5rem;
-        color: red;
+        color: #3b5998;
+        color: rgb(67, 92, 53);
       }
     }
     span {
@@ -38,6 +41,7 @@
       display: block;
       font-size: 0.9rem;
       text-transform: capitalize;
+      font-weight: 300;
     }
   }
 }
