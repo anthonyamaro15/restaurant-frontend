@@ -57,6 +57,7 @@ const Content = () => {
               <address>
                 <a href="tel:+7023649934">(702) 364-9934</a>
                 <span>5095 S Decatur Blvd, Las Vegas, NV 89118</span>
+                <span>Open 24 hours</span>
               </address>
             </div>
             <div className="map">
@@ -72,6 +73,7 @@ const Content = () => {
               <address>
                 <a href="tel:+7025228444">(702) 522-8444</a>
                 <span>1680 W Sunset Rd suite a, Henderson, NV 89014</span>
+                <span>Monday through Saturday 7AM-11PM, Sunday 8AM-11PM</span>
               </address>
             </div>
             <div className="map">

@@ -1,29 +1,7 @@
 .Admin {
   max-width: 500px;
-  margin: 20rem auto;
-
-  label {
-    // border: 1px solid red;
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    input {
-      width: 100%;
-      padding: 0.2rem 0.4rem;
-      font-weight: 300;
-      margin-bottom: 1.3rem;
-    }
-
-    .error {
-      display: inline-block;
-      //   border: 1px solid red;
-      font-size: 0.9rem;
-      position: absolute;
-      top: 2.1rem;
-      left: 0.3rem;
-      display: none;
-    }
-  }
+  margin: 0 auto;
+  padding: 20rem 0;
 
   button {
     display: block;
@@ -31,7 +9,55 @@
     text-transform: uppercase;
     font-size: 1rem;
     background: none;
-    border: 1px solid red;
+    //  border: 1px solid red;
     margin-top: 2rem;
+    background: #e6db14;
+    color: #333;
+    border-radius: 4px;
+  }
+
+  form {
+    label {
+      // border: 1px solid red;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      input {
+        width: 100%;
+        padding: 0.2rem 0.4rem;
+        font-weight: 300;
+        margin-bottom: 1.3rem;
+      }
+
+      select {
+        font-weight: 300;
+        display: block;
+        padding: 0.4rem 0.2rem;
+      }
+
+      .error {
+        display: inline-block;
+        //   border: 1px solid red;
+        font-size: 0.9rem;
+        position: absolute;
+        top: 2.1rem;
+        left: 0.3rem;
+        //   display: none;
+        color: red;
+      }
+    }
+
+    button {
+      display: block;
+      padding: 0.3rem 1.3rem;
+      text-transform: uppercase;
+      font-size: 1rem;
+      background: none;
+      //  border: 1px solid red;
+      margin-top: 2rem;
+      background: rgb(67, 92, 53);
+      color: white;
+      border-radius: 4px;
+    }
   }
 }
