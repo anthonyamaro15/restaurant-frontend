@@ -7,18 +7,24 @@ import AdminNavbar from "./AdminNavbar";
 const Admin = () => {
   const { register, handleSubmit, errors, reset } = useForm();
   const [img_url, setImg] = useState("");
+  const [errImg, setErrImg] = useState("");
 
   const onSubmit = (values) => {
     const newValues = { ...values, img_url };
-    axiosWithAuth()
-      .post("/api/items/add", newValues)
-      .then((res) => {
-        alert(res.data.message);
-        reset();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+
+    if (img_url === "") {
+      setErrImg("Select image");
+    } else {
+      axiosWithAuth()
+        .post("/api/items/add", newValues)
+        .then((res) => {
+          alert(res.data.message);
+          reset();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
 
   const uploadImage = (e) => {
@@ -46,9 +52,9 @@ const Admin = () => {
             name="name"
             id="name"
             placeholder="item name"
-            ref={register}
+            ref={register({ required: true })}
           />
-          <p className="error">erorr here</p>
+          <p className="error">{errors.name && "Require Field"}</p>
         </label>
 
         <label htmlFor="price">
@@ -57,9 +63,9 @@ const Admin = () => {
             name="price"
             id="price"
             placeholder="price"
-            ref={register}
+            ref={register({ required: true })}
           />
-          <p className="error">erorr here</p>
+          <p className="error">{errors.number && "Require Field"}</p>
         </label>
         <label htmlFor="desc">
           <input
@@ -67,9 +73,9 @@ const Admin = () => {
             name="desc_english"
             id="desc"
             placeholder="item description"
-            ref={register}
+            ref={register({ required: true })}
           />
-          <p className="error">erorr here</p>
+          <p className="error">{errors.desc_english && "Require Field"}</p>
         </label>
 
         <label>
@@ -80,10 +86,10 @@ const Admin = () => {
             placeholder="select image"
             onChange={uploadImage}
           />
-          <p className="error">erorr here</p>
+          <p className="error">{errImg && errImg}</p>
         </label>
         <label htmlFor="items">
-          <select name="category" id="items" ref={register}>
+          <select name="category" id="items" ref={register({ required: true })}>
             <option value="">Category</option>
             <option value="combination_plates">Combination Plates</option>
             <option value="a_la_carte">a la carte</option>
@@ -92,7 +98,7 @@ const Admin = () => {
             <option value="daily_specials">daily specials</option>
             <option value="super_combo">super combos</option>
           </select>
-          <p className="error">erorr here</p>
+          <p className="error">{errors.category && "Require Field"}</p>
         </label>
 
         <button type="submit">add item</button>
