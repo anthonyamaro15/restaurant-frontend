@@ -1,6 +1,7 @@
 import React from "react";
 import image from "../imgs/jarritos.jpg";
 import Carausel from "./Carausel";
+import GoggleMap from "./GoggleMap";
 
 const Content = () => {
   return (
@@ -54,21 +55,30 @@ const Content = () => {
             <div className="restaurant-desc">
               <h2>#one</h2>
               <address>
-                <a href="tel:+13115552368">(311) 555-2368</a>
-                <span>address: afdfafdf</span>
+                <a href="tel:+7023649934">(702) 364-9934</a>
+                <span>5095 S Decatur Blvd, Las Vegas, NV 89118</span>
               </address>
             </div>
-            <div className="map"></div>
+            <div className="map">
+              {/**
+             <GoggleMap />
+             <GoggleMap location={{ lat: 36.0974845, lng: -115.2088623 }} />
+            */}
+            </div>
           </div>
           <div className="restaurant-map">
             <div className="restaurant-desc">
               <h2>#two</h2>
               <address>
-                <a href="tel:+13115552368">(311) 555-2368</a>
-                <span>address: afdfafdf</span>
+                <a href="tel:+7025228444">(702) 522-8444</a>
+                <span>1680 W Sunset Rd suite a, Henderson, NV 89014</span>
               </address>
             </div>
-            <div className="map"></div>
+            <div className="map">
+              {/**
+           <GoggleMap location={{ lat: 36.0643037, lng: -115.0591439 }} />
+            */}
+            </div>
           </div>
         </div>
       </div>

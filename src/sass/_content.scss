@@ -303,9 +303,18 @@
         }
       }
       .map {
-        border: 1px solid red;
+        //   border: 1px solid red;
         width: 55%;
         height: 300px;
+
+        .GoogleMaps {
+          width: 100%;
+
+          .icon {
+            color: red;
+            font-size: 1rem;
+          }
+        }
       }
     }
   }
