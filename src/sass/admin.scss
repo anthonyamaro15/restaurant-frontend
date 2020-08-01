@@ -1,20 +1,37 @@
 .Admin {
+  .navbar-wrapper {
+    button {
+      display: block;
+      padding: 0.3rem 1.3rem;
+      text-transform: uppercase;
+      font-size: 1rem;
+      background: none;
+      //  border: 1px solid red;
+      margin-top: 2rem;
+      background: #e6db14;
+      color: #333;
+      border-radius: 4px;
+    }
+  }
+}
+
+.AdminForm {
   max-width: 500px;
   margin: 0 auto;
   padding: 20rem 0;
 
-  button {
-    display: block;
-    padding: 0.3rem 1.3rem;
-    text-transform: uppercase;
-    font-size: 1rem;
-    background: none;
-    //  border: 1px solid red;
-    margin-top: 2rem;
-    background: #e6db14;
-    color: #333;
-    border-radius: 4px;
-  }
+  //   button {
+  //     display: block;
+  //     padding: 0.3rem 1.3rem;
+  //     text-transform: uppercase;
+  //     font-size: 1rem;
+  //     background: none;
+  //     //  border: 1px solid red;
+  //     margin-top: 2rem;
+  //     background: #e6db14;
+  //     color: #333;
+  //     border-radius: 4px;
+  //   }
 
   form {
     label {
