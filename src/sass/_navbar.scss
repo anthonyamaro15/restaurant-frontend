@@ -1,6 +1,5 @@
 .navbar-wrapper {
   width: 100%;
-  //  background: #f4f4f4;
   z-index: 100;
   //   border: 1px solid red;
   position: fixed;
@@ -10,8 +9,7 @@
 
   .Navbar {
     //  border: 1px solid red;
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between);
     align-items: center;
     padding: 0.5rem 1rem;
     max-width: 75%;
@@ -32,7 +30,7 @@
     //  background: #f4f4f4;
 
     .logo-wrapper {
-      color: white;
+      color: $white;
       img {
         width: 90px;
         height: 90px;
@@ -59,11 +57,9 @@
         // border: 1px solid blue;
         margin-left: 0.5rem;
         font-size: 1.2rem;
-        //   color: #435c35;
-        //   color: rgb(31, 77, 31);
 
         //withut logo
-        color: white;
+        color: $white;
 
         @media (max-width: $sm-tablet) {
           display: none;
@@ -76,9 +72,7 @@
       }
 
       .active {
-        //   color: orange;
-        color: red;
-        color: #e6db14;
+        color: $yellow;
       }
     }
   }
@@ -89,7 +83,7 @@
 .scroll-color {
   //   background: rgba(0, 0, 0, 0.9);
   //   background: rgba(67, 92, 53, 0.9);
-  background: #f4f4f4;
+  background: $white;
   transition: all 0.5s ease;
   padding: 0.5rem 0;
 
@@ -103,7 +97,7 @@
     .links {
       a {
         font-size: 1.1rem;
-        color: rgb(67, 92, 53);
+        color: $green;
         //   padding: 0.3rem 1rem;
       }
 
@@ -115,7 +109,7 @@
 
       button {
         font-size: 1.1rem;
-        color: rgb(67, 92, 53);
+        color: $green;
       }
     }
   }

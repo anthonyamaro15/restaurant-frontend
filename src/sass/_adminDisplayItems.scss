@@ -1,19 +1,19 @@
 .Display-items {
-  max-width: 1200px;
+  max-width: $mx-width;
   margin: 9rem auto 0;
-  display: flex;
-  justify-content: space-between;
+
+  @include flex(space-between);
   flex-wrap: wrap;
-  //   margin-top: 9rem;
+
   .SingleItem {
     // border: 1px solid red;
     width: 47%;
     margin-bottom: 3rem;
 
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between);
+
     align-items: center;
-    background: #f4f4f4;
+    background: $white;
     border-radius: 4px;
 
     img {
@@ -37,26 +37,18 @@
       .description {
         font-weight: 300;
         font-size: 1rem;
-        //  display: flex;
-        //  flex-wrap: wrap;
-        //   border: 1px solid red;
-        //   margin-bottom: 0.3rem;
       }
 
       .price {
         font-weight: bold;
         font-size: 1rem;
         color: rgb(67, 92, 53);
-        //   border: 1px solid red;
-        //   margin-bottom: 0.3rem;
       }
     }
 
     .icons {
       // border: 1px solid red;
       display: flex;
-      // justify-content: flex-end;
-      // margin-top: 0.5rem;
 
       span {
         //   border: 1px solid blue;
@@ -66,7 +58,7 @@
 
         &:last-child {
           margin-left: 1rem;
-          color: rgb(67, 92, 53);
+          color: $green;
         }
       }
     }

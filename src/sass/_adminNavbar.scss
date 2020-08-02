@@ -1,7 +1,6 @@
 .Admin {
   .navbar-wrapper {
     width: 100%;
-    //   background: #f4f4f4;
     z-index: 100;
     //  border: 1px solid red;
     position: fixed;
@@ -11,16 +10,11 @@
 
     .Navbar {
       // border: 1px solid red;
-      display: flex;
-      justify-content: space-between;
+      @include flex(space-between);
       align-items: center;
       padding: 0.5rem 1rem;
       max-width: 75%;
       margin: 0 auto;
-
-      // without logo
-      //  align-items: center;
-      //  height: 7vh;
 
       @media (max-width: $tablet) {
         max-width: 950px;
@@ -33,7 +27,7 @@
       //  background: #f4f4f4;
 
       .logo-wrapper {
-        color: white;
+        color: $white;
         img {
           width: 90px;
           height: 90px;
@@ -82,7 +76,6 @@
         }
 
         .active {
-          //   color: orange;
           color: red;
           color: #e6db14;
         }
