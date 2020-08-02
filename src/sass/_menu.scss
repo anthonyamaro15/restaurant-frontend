@@ -3,17 +3,11 @@
     //  border: 1px solid red;
     height: 30vh;
 
-    display: flex;
-    justify-content: center;
+    @include flex(center);
     align-items: center;
-
-    background: rgba(0, 0, 0, 0.5);
     position: relative;
 
-    background: url("../imgs/cooked-food-on-blue-plate-2092507.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    @include bg-properties("../imgs/cooked-food-on-blue-plate-2092507.jpg");
 
     &::after {
       position: absolute;
@@ -22,17 +16,11 @@
       height: 100%;
       width: 100%;
       content: "";
-      // background: url("../imgs/cooked-food-on-blue-plate-2092507.jpg");
-      // background-size: cover;
-      // background-position: center;
-      // background-repeat: no-repeat;
-      background: rgba(0, 0, 0, 0.5);
-
-      // z-index: -1;
+      background: $bg-rgba;
     }
 
     h1 {
-      color: white;
+      color: $white;
       text-transform: uppercase;
       font-size: 2.3rem;
       z-index: 10;
@@ -40,40 +28,32 @@
   }
 
   .MenuPage-section {
-    max-width: 1200px;
+    max-width: $mx-width;
     margin: 9rem auto;
     //  border: 1px solid red;
     padding: 0 1rem;
 
     .menu-btns {
-      display: flex;
-      justify-content: space-between;
+      @include flex(space-between);
+
       a {
-        //   border: 1px solid red;
+        @include buttons($green, $white);
+
         padding: 0.5rem 1rem;
         font-size: 1.2rem;
         text-transform: capitalize;
-        //   background: rgb(148, 143, 143);
-        color: #333;
-        border-radius: 4px;
-        //   background: #e6db14;
-
-        background: #435c35;
-        color: white;
       }
 
       .active-m {
-        //   background: #435c35;
-        //   color: white;
-        background: #e6db14;
+        background: $yellow;
         color: #333;
       }
     }
   }
 
   .Display-items {
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between);
+
     flex-wrap: wrap;
     margin-top: 9rem;
     .SingleItem {
@@ -81,10 +61,10 @@
       width: 47%;
       margin-bottom: 3rem;
 
-      display: flex;
-      justify-content: space-between;
+      @include flex(space-between);
+
       align-items: center;
-      background: #f4f4f4;
+      background: $white;
       border-radius: 4px;
 
       img {
@@ -108,15 +88,12 @@
         .description {
           font-weight: 300;
           font-size: 1rem;
-          //  display: flex;
-          //  flex-wrap: wrap;
-          //  border: 1px solid green;
         }
 
         .price {
           font-weight: bold;
           font-size: 1.1rem;
-          color: rgb(67, 92, 53);
+          color: $green;
         }
       }
     }

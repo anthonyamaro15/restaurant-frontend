@@ -32,10 +32,7 @@ span {
 
 .MainApp {
   background: rgb(228, 223, 223);
-  background: url("../imgs/example2.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include bg-properties("../imgs/example2.jpg");
   position: relative;
   z-index: 100;
 

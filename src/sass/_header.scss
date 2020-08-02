@@ -1,16 +1,13 @@
 .Header {
   //   border: 1px solid red;
   height: 70vh;
-  display: flex;
+  @include flex(center);
+
   align-items: center;
-  justify-content: center;
   position: relative;
-  //   background: rgba(0, 0, 0, 0.5);
-  //   z-index: 10;
-  background: url("../imgs/tacos.jpg");
-  background-size: cover;
+
+  @include bg-properties("../imgs/tacos.jpg");
   background-position: bottom;
-  background-repeat: no-repeat;
 
   &::after {
     position: absolute;
@@ -19,21 +16,16 @@
     height: 100%;
     width: 100%;
     content: "";
-    //  background: rgba(0, 0, 0, 0.6);
-    //  background: url("../imgs/xavier-crook-wIqpmuOloVA-unsplash.jpg");
-    //  background-size: cover;
-    //  background-position: center;
-    //  background-repeat: no-repeat;
-    background: rgba(0, 0, 0, 0.5);
-    //  z-index: -1;
+    background: $bg-rgba;
   }
 
   .inner-wrapper {
-    max-width: 1200px;
+    max-width: $mx-width;
     margin: -7rem auto 0;
-    color: white;
+    color: $white;
     padding: 0 1rem;
     z-index: 10;
+    color: $white;
 
     @media (max-width: $tablet) {
       max-width: 700px;
@@ -43,24 +35,16 @@
       text-transform: uppercase;
       margin-bottom: 1rem;
       font-size: 3.4rem;
-      color: #f4f4f4;
     }
 
     p {
       font-size: 1.3rem;
       margin-bottom: 1rem;
-      color: #f4f4f4;
     }
 
     a {
-      // border: 1px solid red;
+      @include buttons($yellow, #333);
       padding: 0.7em 1.3rem;
-      font-size: 1rem;
-      // color: #435c35;
-      color: #333;
-      text-transform: uppercase;
-      background: #e6db14;
-      border-radius: 4px;
     }
   }
 }

@@ -1,19 +1,15 @@
 .Footer {
-  //   border: 1px solid red;
-  //   background: grey;
-  //   background: rgb(67, 92, 53);
-  background: #f4f4f4;
+  background: $white;
 
   .footer-wrapper {
-    max-width: 1200px;
+    max-width: $mx-width;
     margin: 0 auto;
 
     padding: 5rem 1rem 2rem;
 
     nav {
       // border: 1px solid blue;
-      display: flex;
-      justify-content: space-between;
+      @include flex(space-between);
       margin-bottom: 3rem;
 
       .email,
@@ -25,15 +21,14 @@
           text-transform: none;
           margin-top: 1rem;
           font-size: 1.1rem;
-          color: rgb(67, 92, 53);
-          //  text-decoration: underline;
+          color: $green;
         }
       }
 
       .facebook a {
         font-size: 1.5rem;
         color: #3b5998;
-        color: rgb(67, 92, 53);
+        color: $green;
       }
     }
     span {
