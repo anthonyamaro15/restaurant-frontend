@@ -1,5 +1,5 @@
 .MobileNavbar {
-  width: 300px;
+  width: 280px;
   background: $white;
   z-index: 100;
   position: fixed;
@@ -20,14 +20,30 @@
     //  border: 1px solid blue;
     @include flex(center);
     flex-direction: column;
-    margin-top: 8rem;
+    margin-top: 12rem;
 
     a {
       // border: 1px solid blue;
       display: block;
+      width: 100%;
       // margin-bottom: 1rem;
-      margin: 0.4rem auto;
+      text-align: center;
+      margin: 0 auto 0.4rem;
       color: #333;
+    }
+
+    .FormModal {
+      button {
+        color: #333;
+        font-size: 1rem;
+        //   border: 1px solid red;
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .active {
+      color: $yellow;
     }
   }
 }
@@ -59,10 +75,13 @@
 
   // when cllick again
   &.close {
+    //  background: #333;
     transform: rotate(180deg);
     transition: all 1s ease;
 
     .lines {
+      background: #333;
+
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
       }

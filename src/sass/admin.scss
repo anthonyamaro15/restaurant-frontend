@@ -20,6 +20,12 @@
   margin: 0 auto;
   padding: 20rem 0;
 
+  @media (max-width: $xs-tablet) {
+    width: 350px;
+    font-size: 1rem;
+    padding: 20rem 0 5rem;
+  }
+
   //   button {
   //     display: block;
   //     padding: 0.3rem 1.3rem;
@@ -61,20 +67,21 @@
         left: 0.3rem;
         //   display: none;
         color: red;
+
+        @media (max-width: $xs-tablet) {
+          font-size: 0.8rem;
+        }
       }
     }
 
     button {
-      display: block;
-      padding: 0.3rem 1.3rem;
-      text-transform: uppercase;
-      font-size: 1rem;
-      background: none;
-      //  border: 1px solid red;
       margin-top: 2rem;
-      background: rgb(67, 92, 53);
-      color: white;
-      border-radius: 4px;
+
+      @include buttons($green, $white);
+
+      @media (max-width: $xs-tablet) {
+        font-size: 0.9rem;
+      }
     }
   }
 }
