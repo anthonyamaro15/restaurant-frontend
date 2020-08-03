@@ -3,6 +3,14 @@
   max-width: $mx-width;
   margin: 9rem auto 11rem;
 
+  @media (max-width: $md-phone) {
+    max-width: 900px;
+  }
+
+  @media (max-width: $xs-tablet) {
+    width: 90%;
+  }
+
   h1 {
     text-align: center;
     margin-bottom: 4rem;
@@ -11,10 +19,19 @@
     //  color: #e6db14;
     color: $green;
     //  display: none;
+
+    @media (max-width: $xs-tablet) {
+      font-size: 2rem;
+    }
   }
 
   .special-wrapper {
     @include flex(space-between);
+
+    @media (max-width: $xs-tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     //  border: 1px solid blue;
     background: $white;
@@ -22,10 +39,23 @@
 
     .special-img-wrapper {
       // border: 1px solid blue;
+
+      @media (max-width: $xs-tablet) {
+        width: 100%;
+      }
+
       img {
         width: 550px;
         height: 400px;
         object-fit: cover;
+
+        @media (max-width: $md-phone) {
+          width: 400px;
+          height: 250px;
+        }
+        @media (max-width: $xs-tablet) {
+          width: 100%;
+        }
       }
     }
 
@@ -37,11 +67,24 @@
       @include flex(center);
       flex-direction: column;
 
+      @media (max-width: $xs-tablet) {
+        //   text-align: center;
+        width: 80%;
+        margin-left: 0;
+        padding: 2rem 0;
+        //   font-size: 1rem;
+      }
+
       h2 {
         margin-bottom: 1.5rem;
         text-transform: uppercase;
         //   font-size: 1.4rem;
         font-size: 1.7rem;
+
+        @media (max-width: $xs-tablet) {
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+        }
       }
 
       span {
@@ -49,10 +92,18 @@
         font-size: 1.2rem;
         color: $green;
         font-weight: bold;
+
+        @media (max-width: $xs-tablet) {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
       }
 
       p {
         font-size: 1.2rem;
+        @media (max-width: $xs-tablet) {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -63,6 +114,11 @@
   height: 50vh;
   margin-bottom: 9rem;
   position: relative;
+
+  @media (max-width: $xs-tablet) {
+    height: 40vh;
+    background-position: left;
+  }
 
   @include bg-properties("../imgs/ex.jpg");
   z-index: 0;
@@ -88,15 +144,28 @@
     @include flex(center);
     flex-direction: column;
 
+    @media (max-width: $md-phone) {
+      max-width: 900px;
+    }
+
     h2 {
       margin-bottom: 1.5rem;
       text-transform: uppercase;
       // color: red;
+
+      @media (max-width: $xs-tablet) {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
     }
 
     p {
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
+
+      @media (max-width: $xs-tablet) {
+        font-size: 1rem;
+      }
     }
 
     a {
@@ -110,6 +179,10 @@
       text-transform: uppercase;
       background: $yellow;
       border-radius: 4px;
+
+      @media (max-width: $xs-tablet) {
+        font-size: 0.8rem;
+      }
     }
   }
 }
@@ -120,7 +193,15 @@
   margin: 9rem auto 11rem;
   display: flex;
   flex-direction: column;
-  padding: 1rem 1rem;
+  //   padding: 1rem 1rem;
+
+  @media (max-width: $md-phone) {
+    max-width: 900px;
+  }
+
+  @media (max-width: $xs-tablet) {
+    width: 90%;
+  }
 
   h1 {
     text-align: center;
@@ -129,6 +210,10 @@
     font-size: 2.4rem;
     color: $green;
     //  display: none;
+
+    @media (max-width: $xs-tablet) {
+      font-size: 2rem;
+    }
   }
 
   .lower-content-wrapper {
@@ -137,6 +222,11 @@
     background: $white;
     border-radius: 3px;
 
+    @media (max-width: $xs-tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .menu-imgs {
       position: relative;
 
@@ -144,11 +234,27 @@
         width: 550px;
         //   border: 1px solid red;
 
+        @media (max-width: $md-phone) {
+          width: 400px;
+        }
+
+        @media (max-width: $xs-tablet) {
+          width: 100%;
+        }
+
         img {
           width: 100%;
           //  border: 1px solid blue;
           height: 400px;
           object-fit: cover;
+
+          @media (max-width: $md-phone) {
+            width: 300px;
+            height: 250px;
+          }
+          //  @media (max-width: $xs-tablet) {
+          //    width: 100%;
+          //  }
         }
 
         &::after {
@@ -171,10 +277,32 @@
       flex-direction: column;
       margin-left: 2rem;
 
+      // @media (max-width: $xs-tablet) {
+      //   //   text-align: center;
+      //   width: 80%;
+      //   margin-left: 0;
+      //   padding: 2rem 0;
+      //   //   font-size: 1rem;
+      // }
+      @media (max-width: $xs-tablet) {
+        //   text-align: center;
+        width: 80%;
+        margin-left: 0;
+        padding: 2rem 0;
+        //   font-size: 1rem;
+      }
+
       h2 {
         margin-bottom: 1.5rem;
         text-transform: uppercase;
         font-size: 1.7rem;
+
+        //   border: 1px solid red;
+
+        @media (max-width: $xs-tablet) {
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+        }
       }
 
       span {
@@ -182,11 +310,20 @@
         font-size: 1.2rem;
         font-weight: bold;
         color: $green;
+
+        @media (max-width: $xs-tablet) {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
       }
 
       p {
         font-size: 1.2rem;
         //   font-weight: 300;
+
+        @media (max-width: $xs-tablet) {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -230,9 +367,24 @@
     //  border: 1px solid blue;
     z-index: 100;
 
+    @media (max-width: $md-phone) {
+      max-width: 900px;
+    }
+
+    @media (max-width: $xs-tablet) {
+      width: 90%;
+    }
+
     .restaurant-map {
+      // border: 1px solid green;
       @include flex(space-between);
-      padding: 0 1rem;
+      // padding: 0 1rem;
+
+      @media (max-width: $xs-tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
 
       &:first-child {
         margin-bottom: 1.5rem;
@@ -244,11 +396,20 @@
         @include flex(center);
         flex-direction: column;
 
+        @media (max-width: $xs-tablet) {
+          padding: 2rem 0 0rem;
+        }
+
         h2 {
           font-size: 1.5rem;
           text-transform: uppercase;
           margin-bottom: 1.5rem;
           color: $white;
+
+          @media (max-width: $xs-tablet) {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+          }
         }
 
         address {
@@ -257,19 +418,33 @@
             margin-bottom: 1.5rem;
             // color: #e6db14;
             color: $white;
+
+            @media (max-width: $xs-tablet) {
+              font-size: 1rem;
+              margin-bottom: 1rem;
+            }
           }
           span {
             display: block;
             margin-bottom: 1.5rem;
             color: $white;
             font-weight: 300;
+
+            @media (max-width: $xs-tablet) {
+              font-size: 1rem;
+              margin-bottom: 1rem;
+            }
           }
         }
       }
       .map {
-        //   border: 1px solid red;
+        border: 1px solid red;
         width: 55%;
         height: 300px;
+
+        @media (max-width: $xs-tablet) {
+          width: 100%;
+        }
 
         .GoogleMaps {
           width: 100%;

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import Modal from "./Modal";
 
 const MobileNavbar = () => {
   const [isMoblie, setIsMobile] = useState(false);
@@ -7,6 +8,14 @@ const MobileNavbar = () => {
   const toggleMenu = () => {
     setIsMobile(!isMoblie);
   };
+
+  useEffect(() => {
+    if (isMoblie) {
+      window.document.documentElement.style.overflow = "hidden";
+    } else {
+      window.document.documentElement.style.overflow = "auto";
+    }
+  }, [isMoblie]);
   return (
     <div>
       <div
@@ -19,15 +28,21 @@ const MobileNavbar = () => {
       </div>
       <div className={isMoblie ? "MobileNavbar show" : "MobileNavbar"}>
         <nav>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" exact activeClassName="active">
             Home
           </NavLink>
-          <NavLink to="/locations" activeClassName="active">
-            Locations
+          <NavLink to="/menu/combination" exact activeClassName="active">
+            Menu
           </NavLink>
-          <NavLink to="/login" activeClassName="active">
+
+          {/**
+             <NavLink to="/login" activeClassName="active">
             Admin Login
           </NavLink>
+         */}
+          <div className="FormModal">
+            <Modal />
+          </div>
         </nav>
       </div>
     </div>

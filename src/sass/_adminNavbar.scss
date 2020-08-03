@@ -73,6 +73,10 @@
         button {
           margin-top: 0rem;
           border: none;
+
+          @media (max-width: $xs-tablet) {
+            font-size: 0.9rem;
+          }
         }
 
         .active {

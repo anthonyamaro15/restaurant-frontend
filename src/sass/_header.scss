@@ -35,16 +35,34 @@
       text-transform: uppercase;
       margin-bottom: 1rem;
       font-size: 3.4rem;
+
+      @media (max-width: $phone) {
+        font-size: 2.7rem;
+        text-align: center;
+      }
     }
 
     p {
       font-size: 1.3rem;
       margin-bottom: 1rem;
+
+      @media (max-width: $phone) {
+        font-size: 1.1rem;
+        text-align: center;
+      }
     }
 
     a {
       @include buttons($yellow, #333);
       padding: 0.7em 1.3rem;
+
+      @media (max-width: $phone) {
+        display: flex;
+        justify-content: center;
+        width: 120px;
+        margin: 0 auto;
+        font-size: 0.9rem;
+      }
     }
   }
 }
