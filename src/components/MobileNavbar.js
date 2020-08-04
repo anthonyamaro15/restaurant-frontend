@@ -34,12 +34,6 @@ const MobileNavbar = () => {
           <NavLink to="/menu/combination" exact activeClassName="active">
             Menu
           </NavLink>
-
-          {/**
-             <NavLink to="/login" activeClassName="active">
-            Admin Login
-          </NavLink>
-         */}
           <div className="FormModal">
             <Modal />
           </div>
