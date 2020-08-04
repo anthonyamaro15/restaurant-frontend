@@ -58,16 +58,6 @@
   right: 2rem;
   transition: transform 0.8s ease;
   z-index: 5000;
-  //   border: 1px solid blue;
-
-  //   @media @phone {
-  //     margin: 0;
-  //     top: 1%;
-  //   }
-
-  //   @media @tablet {
-  //     display: inline-block;
-  //   }
 
   @media (max-width: $sm-tablet) {
     display: block;
@@ -101,10 +91,11 @@
     margin: 6px 0;
     //  background: @white;
     background: red;
-    background: $white;
+    background: $yellow;
     width: 40px;
     border-radius: 2px;
     transition: all 0.7s ease;
+
     //  @media @phone {
     //    width: 35px;
     //  }
