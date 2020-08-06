@@ -81,12 +81,10 @@
 
     flex-wrap: wrap;
 
-    //  border: 1px solid red;
     width: 100%;
 
     margin-top: 9rem;
     .SingleItem {
-      // border: 1px solid red;
       width: 47%;
       margin-bottom: 3rem;
 
@@ -109,7 +107,6 @@
         width: 200px;
         height: 200px;
         object-fit: cover;
-        //   border: 1px solid red;
 
         @media (max-width: $xs-tablet) {
           height: 150px;
